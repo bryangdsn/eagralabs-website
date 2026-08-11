@@ -1,25 +1,16 @@
 # Eagra Labs public website
 
-This directory is the static Eagra Labs marketing website and browser-only
-demonstration of Bygo. It is intentionally independent from the production
-application and does not call the Bygo API.
+This directory contains the static company website for
+[`eagralabs.com`](https://eagralabs.com). It presents Eagra Labs as the product
+studio and links product-specific visitors to the separate Root website.
 
-The demonstration stores its fictional working data in the browser's
-`sessionStorage`. Signing out or selecting **Reset demo** deletes that session.
-No demonstration data is sent to a server.
+Root product content, module pages, pricing, contact and the disposable browser
+demonstration now live in `../root-website`, intended for
+[`root.eagralabs.com`](https://root.eagralabs.com).
 
-## GitHub Pages
+Both sites are deliberately independent from the Root application API. The
+interactive demonstration stores fictional data in browser `sessionStorage` and
+deletes it on sign-out or reset.
 
-The production website is published from a separate public GitHub repository.
-Keeping the website release separate lets the application repository remain
-private while the static site uses free GitHub Pages hosting.
-
-The intended public address is [`https://eagralabs.com`](https://eagralabs.com).
-The custom domain is configured through the public repository's Pages settings
-after this directory has been published.
-
-## Brand structure
-
-- Eagra Labs is the company and portfolio brand.
-- Bygo is the connected execution product.
-- The interactive demonstration uses only fictional browser-session data.
+Run `node scripts/build-marketing-sites.mjs` from the repository root to rebuild
+the static HTML, shared styles, metadata and sitemaps.
