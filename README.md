@@ -1,16 +1,9 @@
 # Eagra Labs public website
 
-This directory contains the static company website for
-[`eagralabs.com`](https://eagralabs.com). It presents Eagra Labs as the product
-studio and links product-specific visitors to the separate Root website.
+Static website for https://eagralabs.com, hosted by GitHub Pages from the main branch.
 
-Root product content, module pages, pricing, contact and the disposable browser
-demonstration now live in `../root-website`, intended for
-[`root.eagralabs.com`](https://root.eagralabs.com).
+The public site focuses on FullPlan: home, product overview, company background and contact. Customer sign-in links point to https://fullplan.eagralabs.com/. Pricing is not published while the commercial structure is being finalised.
 
-Both sites are deliberately independent from the Root application API. The
-interactive demonstration stores fictional data in browser `sessionStorage` and
-deletes it on sign-out or reset.
+Root marketing content and assets were removed from this website in the FullPlan-focus change. Earlier versions remain in Git history for future reintroduction; the separate Root website and application are not modified.
 
-Run `node scripts/build-marketing-sites.mjs` from the repository root to rebuild
-the static HTML, shared styles, metadata and sitemaps.
+Preview with `python3 -m http.server 8767 --bind 127.0.0.1`. There is no build step. Contact forms prepare an email in the visitor’s email application; they do not send messages automatically.
